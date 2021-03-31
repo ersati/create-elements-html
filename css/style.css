@@ -6,10 +6,16 @@
 .wrapper {
   display: flex;
   flex-wrap: wrap;
+}
+
+.wrapper .form-container {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.wrapper .form {
+.wrapper .form-container .form {
   flex-basis: 40%;
   background-color: beige;
   display: flex;
@@ -18,17 +24,18 @@
   padding: 20px;
 }
 
-.wrapper .form .form__headline {
+.wrapper .form-container .form .form__headline {
   text-align: center;
   flex-basis: 80%;
 }
 
-.wrapper .form .form__input {
+.wrapper .form-container .form .form__input {
   flex-basis: 40%;
   margin: 10px;
+  height: 20px;
 }
 
-.wrapper .form .form__submit {
+.wrapper .form-container .form .form__submit {
   background-color: black;
   color: white;
   padding: 10px 20px;
@@ -36,9 +43,10 @@
   margin: 15px;
   transition: .3;
   border: 1px solid black;
+  height: 50px;
 }
 
-.wrapper .form .form__submit:hover {
+.wrapper .form-container .form .form__submit:hover {
   background-color: white;
   color: black;
 }

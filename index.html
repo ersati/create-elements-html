@@ -10,19 +10,21 @@
 <body>
 
     <section class="wrapper">
-    <form action="" class="form form--add">
+
+        <div class="form-container">
+    <form  class="form form--add">
         <h1 class="form__headline">Create Elements</h1>
-        <input type="text" class="form__input"><input type="text" class="form__input"><input type="text" class="form__input"><input type="text" class="form__input">
-        <button class="form__submit">Add</button>
+        <input type="text" name='node' class="form__input"><input type="text" name='txt' class="form__input"><input type="text" name='attr' class="form__input"><input type="text" name='value' class="form__input">
+        <button type="submit" class="form__submit">Add</button>
     </form>
 
-    <form action="" class="form form-search">
+    <form  class="form form-search">
         <h1 class="form__headline">Search for Elements</h1>
         <input type="text" class="form__input"><input type="text" class="form__input">
-        <button class="form__submit">Search</button>
+        <button  type="submit" class="form__submit">Search</button>
     </form>
-
-    <div class="container">
+</div>
+    <div class="container-info">
 
     </div>
 
@@ -30,5 +32,6 @@
         <p class="footer__text">Copyrights Piotr Pacewicz</p>
     </footer>
 </section>
+<script src="app.js"></script>
 </body>
 </html>
