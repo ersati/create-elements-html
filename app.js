@@ -28,16 +28,24 @@ const searchForm = document.querySelector(".form--search");
 
 function searchElements(e, element) {
     e.preventDefault()
-const allElements = createResult.querySelectorAll(element)
-console.log(allElements)
+    const allElements = createResult.querySelectorAll(element)
+    console.log(allElements)
     console.log(e)
 
     allElements.forEach(element => {
         console.log(element.className)
         console.log(element.offsetHeight)
+        showElements(element.className, element.offsetHeight)
     })
 }
 
+function showElements(className, offset){
+    const classNameParagraph = `<p>Name of Class: ${className}</p>`
+    const offsetParagraph = `<p>Height of element: ${offset}</p>`
+    searchResult.innerHTML += classNameParagraph;
+    searchResult.innerHTML += offsetParagraph;
+
+}
 searchForm.addEventListener('submit', (e) => {
     searchElements(e, document.querySelector('input[name=search]').value)
 })

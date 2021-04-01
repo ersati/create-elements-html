@@ -50,8 +50,11 @@ justify-content: space-around;
 }
 }
 
-.container{
-    flex-basis: 80%;;
+.container--search{
+    flex-basis: 80%;
+}
+.container--info{
+    flex-basis: 80%;
 }
 .footer{
     flex-basis: 100%;
