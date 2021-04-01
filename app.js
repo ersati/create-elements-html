@@ -1,14 +1,17 @@
 const addButton = document.querySelector('.form--add .form__submit');
 const addForm = document.querySelector('.form--add');
+const searchResult = document.querySelector('.container--search');
+const createResult = document.querySelector('.container--info')
 
-function createElements(e, node = "div", text = "tekst", attr = "class", value = "big") {
+function createElements(e, node, text, attr, value) {
     e.preventDefault();
     const element = document.createElement(node);
-    element.textContent = text;
+    const textNode = document.createTextNode(text);
+    element.appendChild(textNode)
     console.log(element)
     element.setAttribute(attr, value);
 
-    
+    createResult.appendChild(element)
     console.log(e)
     console.log('ok')
 }
@@ -23,11 +26,18 @@ addForm.addEventListener('submit', (e) => createElements(e,
 
 const searchForm = document.querySelector(".form--search");
 
-function searchElements(e) {
+function searchElements(e, element) {
     e.preventDefault()
+const allElements = createResult.querySelectorAll(element)
+console.log(allElements)
     console.log(e)
+
+    allElements.forEach(element => {
+        console.log(element.className)
+        console.log(element.offsetHeight)
+    })
 }
 
 searchForm.addEventListener('submit', (e) => {
-    searchElements(e)
+    searchElements(e, document.querySelector('input[name=search]').value)
 })
