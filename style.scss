@@ -4,69 +4,74 @@
 }
 
 
-.wrapper{
-display: flex;
-// flex-direction: column;
-flex-wrap:wrap ;
-
-.form-container{
-    margin:20px;
+.wrapper {
     display: flex;
-// flex-direction: column;
-flex-wrap:wrap ;
-justify-content: space-around;
-.form {
-    flex-basis: 40%;
-    background-color: beige;
-    display: flex;
+    // flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    .form__headline {
-        text-align: center;
+
+    .form-container {
+        margin: 20px;
+        display: flex;
+        // flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .form {
+            flex-basis: 40%;
+            background-color: beige;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+
+            .form__headline {
+                text-align: center;
+                flex-basis: 80%;
+            }
+
+            .form__input {
+                flex-basis: 40%;
+                margin: 10px;
+                height: 20px;
+
+            }
+
+            .form__submit {
+                background-color: black;
+                color: white;
+                padding: 10px 20px;
+                flex-basis: 60%;
+                margin: 15px;
+                transition: .3;
+                border: 1px solid black;
+                height: 50px;
+            }
+
+            .form__submit:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+
+    .container--search {
         flex-basis: 80%;
+        margin: 10px auto;
+        // padding-left: 40px;
     }
 
-    .form__input{
-        flex-basis: 40%;
-        margin:10px;
-        height: 20px;
-
+    .container--info {
+        flex-basis: 80%;
+        margin: 10px auto;
+        // padding-left: 40px;
     }
-    .form__submit { 
+
+    .footer {
+        flex-basis: 100%;
         background-color: black;
+        text-align: center;
         color: white;
-        padding:10px 20px;
-        flex-basis: 60%;
-        margin: 15px;
-        transition: .3;
-        border:1px solid black;
-        height: 50px;
-    }
-    .form__submit:hover{
-        background-color: white;
-        color:black;
+        padding: 30px;
+        margin-top: 20px;
     }
 }
-}
-
-.container--search{
-    flex-basis: 80%;
-    margin:10px auto;
-    // padding-left: 40px;
-}
-.container--info{
-    flex-basis: 80%;
-    margin:10px auto;
-    // padding-left: 40px;
-}
-.footer{
-    flex-basis: 100%;
-    background-color: black;
-    text-align: center;
-    color:white;
-    padding: 30px;
-    margin-top: 20px;
-}
-}
-
