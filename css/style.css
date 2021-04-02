@@ -53,10 +53,12 @@
 
 .wrapper .container--search {
   flex-basis: 80%;
+  margin: 10px auto;
 }
 
 .wrapper .container--info {
   flex-basis: 80%;
+  margin: 10px auto;
 }
 
 .wrapper .footer {
