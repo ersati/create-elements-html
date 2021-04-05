@@ -40,25 +40,31 @@ function searchElements(e, element) {
     e.preventDefault()
     const allElements = createResult.querySelectorAll(element)
     console.log(e)
+    searchResult.innerHTML = '';
     if (allElements.length === 0) {
         searchResult.innerHTML = `<p>No data, please check diffrent element</p>`
     } else {
         allElements.forEach(element => {
             console.log(element.className)
             console.log(element.offsetHeight)
-            showElements(element.className, element.offsetHeight, element.id)
+            showElements(element.tagName, element.className, element.offsetHeight, element.id)
         })
     }
     document.querySelector('input[name=search]').value = ''
 }
 
-function showElements(className, offset, id) {
-    const classNameParagraph = `<p>Name of Class: ${className}</p>`
-    const offsetParagraph = `<p>Height of element: ${offset}</p>`
-    const idParagraph = `<p>Name of id: ${id}</p>`;
-    searchResult.innerHTML += classNameParagraph;
-    searchResult.innerHTML += offsetParagraph,
-        searchResult.innerHTML += idParagraph;
+function showElements(tagname, className, offset, id) {
+   const divResult = document.createElement('div');
+divResult.setAttribute('class', 'container__result')
+   const tagNameParagraph = `<p>Tag name: ${tagname}</p>`
+   const classNameParagraph = `<p>Class name: ${className}</p>`
+   const offsetParagraph = `<p>Element Height: ${offset}</p>`
+   const idParagraph = `<p>Id Name: ${id}</p>`;
+   divResult.innerHTML += tagNameParagraph;
+   divResult.innerHTML += classNameParagraph;
+   divResult.innerHTML += offsetParagraph,
+   divResult.innerHTML += idParagraph;
+   searchResult.appendChild(divResult)
 
 
 }

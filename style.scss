@@ -58,6 +58,13 @@
         flex-basis: 80%;
         margin: 10px auto;
         // padding-left: 40px;
+        display: grid;
+        grid-template-columns: (200px 200px 200px);
+        grid-template-rows: repeat(50px);
+        background-color: cadetblue;
+        .container__result{
+            margin: 10px;
+        }
     }
 
     .container--info {

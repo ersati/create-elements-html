@@ -54,6 +54,14 @@
 .wrapper .container--search {
   flex-basis: 80%;
   margin: 10px auto;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: repeat(50px);
+  background-color: cadetblue;
+}
+
+.wrapper .container--search .container__result {
+  margin: 10px;
 }
 
 .wrapper .container--info {
